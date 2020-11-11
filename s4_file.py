@@ -15,6 +15,11 @@ def create_bucket(bucket_prefix, s3_connection):
             )
     print (bucket_name, current_region)
     return bucket_name, bucket_response
+    
+    #create first bucket
+#first_bucket_name, first_response = create_bucket(
+#...     bucket_prefix='firstpythonbucket', 
+#...     s3_connection=s3_resource.meta.client)
 
 #naming files
 
@@ -23,6 +28,9 @@ def create_temp_file(size, file_name, file_content):
 	with open(random_file_name, 'w') as f:
 		f.write(str(file_content) * size)
 	return random_file_name
+	
+#create first file
+# first_file_name = create_temp_file(300, 'firstfile.txt', 'f')   
 	
 	
 	
